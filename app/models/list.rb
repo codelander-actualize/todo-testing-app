@@ -6,9 +6,7 @@ class List < ApplicationRecord
   end
 
   def snooze_all_tasks!
-    tasks.each do |task|
-      task.snooze_hour!
-    end
+    tasks.each { |task| task.snooze_hour! }
   end
 
   def total_duration
